@@ -222,51 +222,54 @@
           <h2 class="form-map">
             Маєте <span class="beanty-zone1"> пропозиції <br></span> або запитання заповніть зворотню форму
           </h2>
-          <form name="contact-form" autocomplete="on"> 
-            <div class="form-field">
-              <label class="form-label visually-hidden" for="user-name"> Введіть ваше ім'я та прізвище </label>
-            <input 
+        <form name="contact-form" method="POST" data-netlify="true" autocomplete="on"> 
+    <div class="form-field">
+        <label class="form-label visually-hidden" for="user-name1"> Введіть ваше ім'я та прізвище </label>
+        <input 
             class="form-input" 
             type="text" 
             id="user-name1" 
             name="user-name1"
             placeholder="Ваше ім'я та прізвище"
             required/>
-            </div>
+    </div>
             
-           <div class="form-field">
-            <label class="form-label visually-hidden" for="user-tel"> Ваш номер телефону </label>
-            <input 
+    <div class="form-field">
+        <label class="form-label visually-hidden" for="user-tel1"> Ваш номер телефону </label>
+        <input 
             class="form-input" 
             type="tel" 
             id="user-tel1" 
             name="user-tel1"
             placeholder="Ваш номер телефону"
             required/>
-           </div>
-    
-          <div class="form-field">
-            <label class="form-label visually-hidden" for="user-email"> Ваша електронна пошта </label>
-            <input 
+    </div>
+
+    <div class="form-field">
+        <label class="form-label visually-hidden" for="user-email1"> Ваша електронна пошта </label>
+        <input 
             class="form-input" 
             type="email" 
             id="user-email1" 
             name="user-email1"
             placeholder="Ваша електронна пошта"
             required/>
-          </div>
-    
-            <button class="form-button button" type="submit"> Відправити свої дані</button>
+    </div>
 
-            <input type="checkbox" 
-            id="terms-conditions" 
-            name="terms-conditions"> 
-            <label for="terms-conditions"> 
-              Я погоджуюсь з політикою конфіденційності
-            </label>
+    <div class="form-field-checkbox" style="margin: 10px 0;">
+        <input type="checkbox" id="terms-conditions" name="terms-conditions" required> 
+        <label for="terms-conditions"> 
+            Я погоджуюсь з <a href="policy.html" target="_blank">політикою конфіденційності</a>
+        </label>
+    </div>
 
-            <p class="form-terms"> Натискаючи на кнопку я погоджуюсь <a class="form-terms-link" href="#">з політикою конфіденційності</a></p>
-          </form>
+    <button class="form-button button" type="submit"> Відправити свої дані</button>
+
+    <p class="form-terms" style="font-size: 12px; margin-top: 10px;"> 
+        Натискаючи на кнопку, я погоджуюсь 
+        <a class="form-terms-link" href="policy.html" target="_blank">з політикою конфіденційності</a>
+    </p>
+</form>
       
          </div>
               </div>
@@ -346,43 +349,47 @@
       <h2 class="call"> Замовити дзвінок</h2>
       <p class="call-span"> Маєте <span class="beanty-zone1">пропозиції </span>
         або запитання заповніть зворотню форму</p>
-     <form name="modal-form" autocomplete="on" netlify>
-        <div class="form-field">
-          <label class="form-label visually-hidden" for="user-name"> Введіть ваше ім'я </label>
+   <form name="modal-form" method="POST" autocomplete="on" netlify>
+    <div class="form-field">
+        <label class="form-label visually-hidden" for="user-name"> Введіть ваше ім'я </label>
         <input 
-        class="form-input" 
-        type="text" 
-        id="user-name" 
-        name="user-name"
-        placeholder="Ваше ім'я"
-        required/>
-        </div>
+            class="form-input" 
+            type="text" 
+            id="user-name" 
+            name="user-name"
+            placeholder="Ваше ім'я"
+            required/>
+    </div>
         
-       <div class="form-field">
+    <div class="form-field">
         <label class="form-label visually-hidden" for="user-tel"> Ваш телефон </label>
         <input 
-        class="form-input" 
-        type="tel" 
-        id="user-tel"
-        name="user-tel"
-        placeholder="Ваш номер телефону"
-        required
-        pattern="^\+[0-9]{12}" />
-       </div>
+            class="form-input" 
+            type="tel" 
+            id="user-tel"
+            name="user-tel"
+            placeholder="Ваш номер телефону"
+            required
+            pattern="^\+[0-9]{12}" />
+    </div>
 
-      <div class="form-field">
+    <div class="form-field">
         <label class="form-label visually-hidden" for="user-email"> Ваша електронна адреса </label>
         <input 
-        class="form-input" 
-        type="email" 
-        id="user-email" 
-        name="user-email"
-        placeholder="Ваша електронна пошта"
-        required/>
-      </div>
+            class="form-input" 
+            type="email" 
+            id="user-email" 
+            name="user-email"
+            placeholder="Ваша електронна пошта"
+            required/>
+    </div>
 
-        <button class="form-button button" type="submit"> Відправити свої дані</button>
-      </form>
+    <p style="font-size: 12px; margin: 10px 0;">
+        Натискаючи кнопку, ви погоджуєтеся з <a href="policy.html">політикою конфіденційності</a>
+    </p>
+
+    <button class="form-button button" type="submit"> Відправити свої дані</button>
+</form>
     </div>
   </div> 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"> </script>
