@@ -1,0 +1,92 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+
+            /* фон як на картинці */
+            background: linear-gradient(180deg, #8ec5fc, #e0c3fc);
+            background-attachment: fixed;
+        }
+
+        header {
+            text-align: center;
+            background: #007bff;
+            color: white;
+            padding: 25px 10px;
+            font-size: 26px;
+            font-weight: bold;
+            border-radius: 10px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto 40px;
+
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 16px;
+
+            border: 3px solid #d9ebff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .platform-section {
+            margin-bottom: 45px;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+        }
+
+        .platform-section h2 {
+            margin-top: 0;
+            color: #007bff;
+            font-size: 26px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+
+        .device-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 15px;
+        }
+
+        .device-card {
+            flex: 1 1 40%;
+            background: rgba(236, 240, 243, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 250px;
+            border: 1px solid #dfe6ed;
+        }
+
+        .device-card h3 {
+            margin-top: 0;
+            color: #28a745;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .device-card ul {
+            margin: 0;
+            padding-left: 15px;
+        }
+
+        .device-card li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .device-card a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .device-card a:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,114 @@
+/* 1. БАЗОВІ СТИЛІ (без змін) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #8ec5fc, #e0c3fc);
+    background-attachment: fixed;
+}
+
+header {
+    text-align: center;
+    background: #007bff;
+    color: white;
+    padding: 25px 10px;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto 40px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 16px;
+    border: 3px solid #d9ebff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* 2. ТАБЛИЦІ (Адаптовані) */
+.platform-section {
+    margin-bottom: 45px;
+    padding: 15px;
+    border-left: 4px solid #007bff;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+}
+
+.command-table {
+    width: 100% !important;
+    border-collapse: collapse;
+}
+
+.command-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    word-break: break-word;
+}
+
+/* 3. ВІДЕО-СІТКА (ПРИМУСОВЕ СТИСКАННЯ) */
+.video-grid {
+    display: grid !important;
+    /* Дозволяємо сітці ставати дуже вузькою */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.video-item {
+    width: 100% !important;
+    height: auto !important; /* Скасовуємо фіксовану висоту */
+    aspect-ratio: 16 / 9 !important; /* Примусові пропорції */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Це правило змушує iframe ігнорувати атрибути width="560" */
+.video-item iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
+
+/* 4. КАРТКИ ПРИСТРОЇВ */
+.device-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.device-card {
+    flex: 1 1 250px;
+    background: rgba(236, 240, 243, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 5. МОБІЛЬНА ВЕРСІЯ (Екрани до 480px) */
+@media (max-width: 480px) {
+    /* Примусово робимо 2 колонки для відео */
+    .video-grid {
+        grid-template-columns: 1fr 1fr !important; 
+        gap: 8px !important;
+    }
+
+    .container {
+        width: 95% !important;
+        padding: 10px !important;
+    }
+
+    .command-table {
+        font-size: 12px;
+    }
+
+    /* Картки стають одна під одною */
+    .device-card {
+        flex: 1 1 100%;
+    }
+}

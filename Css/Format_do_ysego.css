@@ -1,0 +1,32 @@
+/* 1. СТИЛІ ДЛЯ МОБІЛЬНОГО (за замовчуванням) */
+
+.contact-container {
+    display: flex;
+    flex-direction: column; /* На мобільному: Карта над Формою */
+    gap: 20px;
+}
+
+.mapa, .contack-form {
+    width: 100%; /* На мобільному обидва займають 100% ширини */
+}
+
+
+/* 2. СТИЛІ ДЛЯ ПЛАНШЕТА ТА ДЕСКТОПА */
+
+@media (min-width: 768px) {
+    
+    .contact-container {
+        flex-direction: row; /* Автоматично перемикаємо на рядок */
+        justify-content: space-between;
+    }
+
+    .mapa, .contack-form {
+        flex-basis: 50%; /* Автоматично ділимо місце порівну (50/50) */
+    }
+}
+.section-people{
+    width: 100%;
+    max-width: 1264px;
+    margin:0 auto;
+    padding: 0px 16px;
+}
